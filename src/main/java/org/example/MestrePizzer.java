@@ -2,19 +2,23 @@ package org.example;
 
 public class MestrePizzer {
 
-    public Pizza makeFourCheesePizza(String size, String dough, String topping) {
-        return new FourCheesePizzaBuilder()
-                .setSize(size)
-                .setDough(dough)
-                .addTopping(topping)
+    public Pizza makeFourCheesePizza(PizzaBuilder pizzaBuilder) {
+        return pizzaBuilder
+                .setSize("Medium")
+                .setDough("Thin")
+                .addTopping("Mozzarella")
+                .addTopping("Blue cheese")
+                .addTopping("Cheddar")
+                .addTopping("Gorgonzola")
                 .build();
     }
 
-    public Pizza makeVeganPizza(String size, String dough, String topping) {
+    public Pizza makeVeganPizza(PizzaBuilder pizzaBuilder) {
         return new VeganPizzaBuilder()
-                .setSize(size)
-                .setDough(dough)
-                .addTopping(topping)
+                .setSize("Small")
+                .setDough("Thin")
+                .addTopping("Oli")
+                .addTopping("Aubergine")
                 .build();
     }
 

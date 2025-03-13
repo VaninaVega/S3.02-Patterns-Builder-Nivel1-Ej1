@@ -7,8 +7,8 @@ public class Main {
 
         MestrePizzer constructor = new MestrePizzer();
 
-        Pizza FourCheesePizzaBuilder = constructor.makeFourCheesePizza("Big", "Fine", "Egg");
-        Pizza VeganPizzaBuilder = constructor.makeVeganPizza("Median", "Gross", "Oli");
+        Pizza FourCheesePizzaBuilder = constructor.makeFourCheesePizza(new FourCheesePizzaBuilder());
+        Pizza VeganPizzaBuilder = constructor.makeVeganPizza(new VeganPizzaBuilder());
 
         System.out.println("Your pizza 4 cheese: " + FourCheesePizzaBuilder);
         System.out.println("********************************************************************");
